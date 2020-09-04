@@ -7,9 +7,9 @@ import pygame,sys
 from pygame.locals import *
 
 class Bird(pygame.sprite.Sprite):
-    def __init__(self,width,height,x,y):
+    def __init__(self,width,height,x,y,image):
         super().__init__()
-        self.loadBird = pygame.image.load('./image/Mosquito.png').convert_alpha()
+        self.loadBird = pygame.image.load('./image/{}.png'.format(image)).convert_alpha()
         #self.loadBird=pygame.image.load('./image{}'.formate(image)).convert_alpha()
         self.birdImage=pygame.transform.scale(self.loadBird,(width,height))
 
